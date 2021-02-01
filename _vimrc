@@ -376,3 +376,9 @@ colorscheme edge
 "change numberline guibg=#dbd19e
 highlight LineNr guifg=#4a4d55 guibg=#30323a
 set nuw=5
+
+inoremap <expr> <cr> 
+   \   getline(".") =~ '\S\s*{$'                 ? "<bs><cr>{<cr>}<esc>O"
+   \ : getline('.') =~ '^\s*{$'                  ? "<cr>}<esc>O" 
+   \ : getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O"
+   \ :                                             "<cr>"
