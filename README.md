@@ -1,6 +1,6 @@
 # MY VIM - TMUX - BASH configuration on WSL2 for c/c++ and python development
 
-All of these are basic configurations. You can search for other cool stuffs for vim and tmux
+All of these are basic configurations. You can search for other cool stuffs for vim and tmux on google :)
 
 Inspired by https://www.youtube.com/watch?v=CVNeOaAIjU8&t=285s
 
