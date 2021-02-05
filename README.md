@@ -31,9 +31,9 @@ Note that this upgrade could take for hours :(
   
 	 6.6 Install coc-clangd, coc-json, coc-pyright and some other language servers by CocInstall
   
-	 6.7 Check if it's work with some python and c++ files
+	 6.7 Check if it's working with some python and c++ files
   
-	 (Optional) coc-pair for parentheses autocomplete
+	 (Optional) coc-pairs for parentheses autocomplete
 
 7. Install XServer. Watch https://www.youtube.com/watch?v=uL8nnuvybL8. 
 
@@ -56,7 +56,6 @@ Note that this upgrade could take for hours :(
 Remember these files are all in $HOME of our WSL not Windows. Don't edit any file in WSL by any Windows text editor
 
 I use a theme called Dracula (https://draculatheme.com) for Windows Terminal, Tmux and also Vim.
-
 
 
 
