@@ -1,7 +1,5 @@
 # MY VIM - TMUX - BASH configuration on WSL2 for c/c++ and python development
 
-All of these are basic configurations. You can search for other cool stuffs for vim and tmux on google :)
-
 Inspired by https://www.youtube.com/watch?v=CVNeOaAIjU8&t=285s
 
 # Set up
@@ -9,7 +7,6 @@ Inspired by https://www.youtube.com/watch?v=CVNeOaAIjU8&t=285s
 1. Set up WSL (windows subsystem for linux - only support on windows 10) or use a VM
 
 2. Check the version of wsl if it's 1, upgrade to wsl2 for GUI support.
-Note that this upgrade could take for hours :(
 
 3. Install Ubuntu or Kali (I use Ubuntu)
 
