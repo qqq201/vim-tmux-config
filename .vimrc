@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree' "{ 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -7,11 +7,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'frazrepo/vim-rainbow'
 Plug 'preservim/nerdcommenter'
-"Plug 'cdelledonne/vim-cmake'
 Plug 'christoomey/vim-tmux-navigator'
+"Plug 'vim-python/python-syntax'
 call plug#end()
 
 set encoding=utf-8
@@ -24,21 +22,15 @@ filetype on
 set cindent
 let mapleader = ","
 set noswapfile
-set noesckeys
 set termguicolors
 set mouse=a
 
-if &term == 'win32'
-   let &t_ti.=" \e[1 q"
-   let &t_SI.=" \e[5 q-- INSERT --"
-   let &t_EI.=" \e[1 q"
-   let &t_te.=" \e[0 q"
-else
-   let &t_ti.="\e[1 q"
-   let &t_SI.="\e[5 q"
-   let &t_EI.="\e[1 q"
-   let &t_te.="\e[0 q"
-endif
+colorscheme gruvbox
+set bg=dark
+"autocmd InsertEnter * set cul
+
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
 
 "change the navigation
 nnoremap <C-h> <C-w>h
@@ -57,8 +49,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
 
 " nerdtree arrows
-let NERDTreeDirArrowExpandable = "\u2bc8"
-let NERDTreeDirArrowCollapsible = "\u2bc6"
+let NERDTreeDirArrowExpandable = "▶"
+let NERDTreeDirArrowCollapsible = "▼"
 
 "nerdtree toggle
 nmap <C-t> :NERDTreeToggle<CR>
@@ -73,17 +65,17 @@ autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
 "spliting border
-set fillchars+=vert:\
-highlight VertSplit guibg=#5d6c9a cterm=NONE
+set fillchars+=vert:\ 
+"highlight VertSplit ctermbg=darkgrey cterm=NONE
 
 "set buffer bar
 nnoremap <C-V> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
 "airline conf
-let g:airline_theme='violet'
+let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_section_b = '%{strftime("%c")}'
+"let g:airline_section_b = '%{strftime("%c")}'
 let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_powerline_fonts = 1
@@ -93,33 +85,12 @@ set tabstop=4
 set shiftwidth=4
 
 "tab indent line
-set listchars=tab:\│\
+set listchars=tab:\│\ 
 set list
 
 "folding
 set foldmethod=indent
 set nofoldenable
-
-colorscheme dracula
-set nuw=5
-
-"C++
-"let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:cpp_class_scope_highlight = 1
-let g:cpp_class_decl_highlight = 1
-let g:cpp_member_variable_highlight = 1
-
-"rainbow brackets
-let g:rainbow_active = 1
-let g:rainbow_load_separately = [
-        \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-        \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
-        \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-        \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
-        \ [ 'nerdtree', [] ],
-        \]
-
-
 "Coc
 set signcolumn=yes
 set hidden
@@ -237,7 +208,7 @@ command! -nargs=0 OR   :call CocAction('runCommand', 'editor.action.organizeImpo
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
@@ -257,10 +228,8 @@ nnoremap <silent><nowait> <space>k :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p :<C-u>CocListResume<CR>
 
-nmap <leader>rn <Plug>(coc-rename)
-"auto pair
-inoremap <expr> <cr>
-        \   getline(".") =~ '\S\s*{$' ? "<bs><cr>{<cr>}<esc>O"
-        \ : getline('.') =~ '^\s*{$' ? "<cr>}<esc>O"
-        \ : getline(".")[col(".")-2:col(".")-1]=="{}" ? "<cr><esc>O"
-        \ : "<cr>"
+"python highlight
+let g:python_highlight_all = 1
+let g:python_highlight_indent_errors = 0
+let g:python_highlight_space_errors = 0
+
