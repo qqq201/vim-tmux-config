@@ -1,15 +1,15 @@
-# MY VIM and TMUX configuration on WSL
+# MY simple VIM and TMUX configuration in WSL
 
 Terminal: Windows Terminal
 
 Font: Inconsolata NF
 
-Fish as the main shell. I use [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) to install packages and some themes (current theme is batman)
+Shell: Fish. I use [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) to install some packages and themes (the current theme is batman)
 
 Have a nice theme with Tmux by [oh-my-tmux](https://github.com/pangliang/oh-my-tmux)
 
 ## Key bindings in VIM
-- Ctrl t: open NERD tree
+- Ctrl t: open the NERD tree
 
 - Ctrl [h/j/k/l]: switch between windows (also tmux panes)
 
