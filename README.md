@@ -1,58 +1,43 @@
-# MY VIM - TMUX - BASH configuration on WSL2 for c/c++ and python development
+# MY VIM and TMUX configuration on WSL
 
-Inspired by https://www.youtube.com/watch?v=CVNeOaAIjU8&t=285s
+Terminal: Windows Terminal
 
-# Set up
+Font: Inconsolata NF
 
-1. Set up WSL (windows subsystem for linux - only support on windows 10) or use a VM
+Fish as the main shell. I use [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) to install packages and some themes (current theme is batman)
 
-2. Check the version of wsl if it's 1, upgrade to wsl2 for GUI support.
+Have a nice theme with Tmux by [oh-my-tmux](https://github.com/pangliang/oh-my-tmux)
 
-3. Install Ubuntu or Kali (I use Ubuntu)
+## Key bindings in VIM
+- Ctrl t: open NERD tree
 
-4. Install a terminal (I use Windows Terminal) and customize it
+- Ctrl [h/j/k/l]: switch between windows (also tmux panes)
 
-5. Login and upgrade ubuntu
+- Ctrl [v/p]: switch between tabs
 
-6. Configure vim base on my .vimrc.
-	
-	 6.1 Basic configs first. Install vim plugins manager. Then install plugins and corresponding configurations except coc.nvim
-  
-	 6.2 Install nodejs by nvm
-  
-	 6.3 Install build-essential and clangd
-  
-	 6.4 create .bash_aliases file for storing aliases of python
-  
-	 6.5 Plug coc.nvim
-  
-	 6.6 Install coc-clangd, coc-json, coc-pyright and some other language servers by CocInstall
-  
-	 6.7 Check if it's working with some python and c++ files
-  
-	 (Optional) coc-pairs for parentheses autocomplete
+- //: comment a line
 
-7. Install XServer. Watch https://www.youtube.com/watch?v=uL8nnuvybL8. 
+Other key bindings by Coc packages you can see it [here](https://github.com/neoclide/coc.nvim)
 
-   export your windows ip
 
-   add these 2 commands to your .bashrc
+## Key bindings in TMUX
+- Ctrl space as the prefix.
 
-      export SDL_AUDIODRIVER='dsp'
+- Ctrl [h/j/k/l]: switch between panes
 
-      export LIBGL_ALWAYS_INDIRECT=1
+- [prefix] &: kill current window
 
-8. Install Tmux and configure it, look my .tmux.conf (install tmux plugins manager)
+- [prefix] x: kill current pane
 
-9. Done! now you're good to go.
+- [prefix] [*left/right/up/down*]: resize current pane
 
-# Result
+- [prefix] v: create a new pane on the left
 
-![image](https://user-images.githubusercontent.com/61228506/107035447-c6c8f900-67ea-11eb-8ae9-847972593eb4.png)
+- [prefix] h: create a new pane at the bottom
 
-Remember these files are all in $HOME of our WSL not Windows. Don't edit any file in WSL by any Windows text editor
+**NOTE: .tmux.conf.local file only contains configurations that I've added to the end of the default in oh-my-tmux package.**
 
-I use a theme called Dracula (https://draculatheme.com) for Windows Terminal, Tmux and also Vim.
+![image](https://user-images.githubusercontent.com/61228506/130060007-946d3c3e-1782-4ed3-82bc-c1aff9a68f9d.png)
 
 
 
