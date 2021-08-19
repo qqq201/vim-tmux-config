@@ -1,0 +1,6 @@
+{
+	"clangd.path": "clangd-9",
+	"diagnostic.errorSign": "✘",
+	"diagnostic.warningSign": "△",
+	"diagnostic.infoSign": "💡"
+}
