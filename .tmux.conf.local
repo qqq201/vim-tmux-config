@@ -1,7 +1,7 @@
+# binding prefix to C-space
 unbind C-b
 set-option -g prefix C-space
 bind-key C-space send-prefix
-set -g mouse on
 
 set -g default-terminal "xterm-256color"
 set -ga terminal-overrides ",xterm-256color:Tc"
@@ -40,7 +40,6 @@ bind -r Down resize-pane -D 5
 unbind Up
 bind -r Up resize-pane -U 5
 
-bind-key r source ~/.tmux.conf \; display-message "~/.tmux.conf reloaded."
-
+# split window
 bind-key v split-window -h
 bind-key h split-window -v
