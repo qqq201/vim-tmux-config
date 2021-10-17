@@ -36,7 +36,5 @@ Tmux with [oh-my-tmux](https://github.com/pangliang/oh-my-tmux)
 
 **NOTE: .tmux.conf.local file only contains configurations that I've added to the end of the default oh-my-tmux package.**
 
-![image](https://user-images.githubusercontent.com/61228506/130060007-946d3c3e-1782-4ed3-82bc-c1aff9a68f9d.png)
-
 
 
