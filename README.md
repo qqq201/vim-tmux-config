@@ -1,4 +1,4 @@
-# MY simple VIM and TMUX configuration in WSL
+# My simple VIM and TMUX configuration in WSL
 
 Terminal: Windows Terminal
 
@@ -9,7 +9,7 @@ Shell: Fish + [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
 Tmux with [oh-my-tmux](https://github.com/pangliang/oh-my-tmux)
 
 ## Key bindings in VIM
-- Ctrl t: open the NERD tree
+- Ctrl t: toggle the NERD tree
 
 - Ctrl [h/j/k/l]: switch between windows (also tmux panes)
 
@@ -34,7 +34,7 @@ Tmux with [oh-my-tmux](https://github.com/pangliang/oh-my-tmux)
 
 - [prefix] h: create a new pane at the bottom
 
-**NOTE: .tmux.conf.local file only contains configurations that I've added to the end of the default oh-my-tmux package.**
+**NOTE: the uploaded .tmux.conf.local file only contains configurations that I've added to the end of the default of oh-my-tmux package.**
 
 
 
