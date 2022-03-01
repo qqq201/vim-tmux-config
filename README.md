@@ -8,6 +8,8 @@ Shell: Fish + [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
 
 Tmux with [oh-my-tmux](https://github.com/pangliang/oh-my-tmux)
 
+NVM install via Oh my fish: https://riptutorial.com/node-js/example/17273/installing-with-node-version-manager-under-fish-shell-with-oh-my-fish-
+
 ## Key bindings in VIM
 - Ctrl t: toggle the NERD tree
 
